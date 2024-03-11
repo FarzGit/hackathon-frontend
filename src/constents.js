@@ -3,5 +3,5 @@
 
 
 
-export const BASE_URL= "44.204.65.112:8000/api/users"
+export const BASE_URL= "44.204.65.112:8000/api/users/"
 export const local = '44.204.65.112:8000/static/'

@@ -6,7 +6,7 @@ export default defineConfig({
   server:{
     proxy:{
       '/api/users/':{
-        target:'https://hackathon-backend-hm3i.onrender.com',
+        target:'44.204.65.112:8000',
         changeOrigin:true,
         // rewrite: (path) => path.replace(/^\/api/, ''), 
       }
