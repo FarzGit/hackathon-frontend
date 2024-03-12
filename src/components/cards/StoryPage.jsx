@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-key */
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { FaArrowRight } from "react-icons/fa";
@@ -62,7 +64,18 @@ const StoryPage = () => {
   };
   
   const handleShare = () => {
-    const formData = new FormData();
+
+     if(!name){
+      toast.error("Please enter your name.")
+    }else if(!title){
+      toast.error("Please enter your title.")
+    }else if(!description){
+      toast.error("Please enter your description.")
+    }else if(!image){
+      toast.error("Please share your image.")
+    }else{
+
+      const formData = new FormData();
     formData.append("image", image);
     formData.append("name", name);
     formData.append("title", title);
@@ -82,6 +95,12 @@ const StoryPage = () => {
     setDescription("");
     setImage(null);
     closeModal();
+
+    }
+
+
+
+    
   };
 
   return (
