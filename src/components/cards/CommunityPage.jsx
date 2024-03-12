@@ -30,6 +30,26 @@ const StoryPageCard = () => {
 
 
   const handleVolunteerButtonClick = () => {
+
+
+
+    if (!name) {
+      toast.error('Please enter your name.');
+      return;
+    }
+
+    if (!phoneNumber) {
+      toast.error('Please enter your phone number.');
+      return;
+    }
+
+    if (!location) {
+      toast.error('Please enter your location.');
+      return;
+    }
+
+
+
     const data = {
       name: name,
       number: phoneNumber,
